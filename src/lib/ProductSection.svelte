@@ -1,8 +1,6 @@
 <script>
   export let title = '';
   export let products = [];
-
-  console.log(products);
 </script>
 
 <section class="products">
@@ -31,7 +29,7 @@
 
   .products {
     @include layout.padding;
-    color: color.$default-text;
+    color: color.$text-default;
     width: 100%;
 
     &__header {
@@ -78,12 +76,12 @@
       text-decoration: none;
       font-weight: bold;
       font-size: 0.9rem;
-      color: color.$secondary-text;
+      color: color.$call-to-action;
       margin-right: 1rem;
 
       &:visited,
       &:active {
-        color: color.$secondary-text;
+        color: color.$call-to-action;
       }
     }
   }
@@ -110,13 +108,13 @@
     &__link {
       text-decoration: none;
       font-weight: bold;
-      color: color.$secondary-text;
+      color: color.$call-to-action;
       position: relative;
       margin-right: 1rem;
 
       &:visited,
       &:active {
-        color: color.$secondary-text;
+        color: color.$call-to-action;
       }
 
       &::after {

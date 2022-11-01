@@ -57,7 +57,7 @@
       width: 100%;
       display: inline-flex;
       align-items: stretch;
-      background-color: color.$secondary-text;
+      background-color: color.$call-to-action;
     }
 
     @include layout.on-tablet {

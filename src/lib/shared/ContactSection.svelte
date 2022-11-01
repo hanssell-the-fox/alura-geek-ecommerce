@@ -132,7 +132,7 @@
       display: inline-flex;
       flex-direction: column;
       width: 100%;
-      background-color: color.$section-background;
+      background-color: color.$bg-light;
       padding: 0.5em 1rem;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
@@ -155,7 +155,7 @@
     &__message {
       width: 100%;
       min-height: 5rem;
-      background-color: color.$section-background;
+      background-color: color.$bg-light;
       padding: 1rem;
       resize: none;
       border: none;
@@ -168,8 +168,8 @@
     &__submit {
       display: inline-flex;
       align-items: stretch;
-      border-color: color.$secondary-text;
-      background-color: color.$secondary-text;
+      border-color: color.$call-to-action;
+      background-color: color.$call-to-action;
       color: #fff;
       width: 50%;
 

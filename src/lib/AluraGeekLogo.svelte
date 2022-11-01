@@ -10,7 +10,7 @@
 
   .logo {
     align-items: center;
-    color: color.$default-text;
+    color: color.$text-default;
     display: inline-flex;
     font-size: 0.8em;
     font-weight: 600;
@@ -23,7 +23,7 @@
     }
 
     &__special-text {
-      color: color.$secondary-text;
+      color: color.$call-to-action;
     }
   }
 </style>

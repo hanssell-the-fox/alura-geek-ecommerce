@@ -31,7 +31,7 @@
   @use 'color';
 
   :global(body) {
-    background-color: color.$body-background;
+    background-color: color.$bg-default;
   }
 
   // Top navigation bar
@@ -39,7 +39,7 @@
     @include layout.flex-container;
     @include layout.padding;
 
-    background-color: color.$section-background;
+    background-color: color.$bg-light;
     gap: 1em;
     justify-content: space-between;
     min-height: 4.5rem;
@@ -52,7 +52,7 @@
     &__login-button {
       max-width: 10em;
       width: 100%;
-      color: color.$secondary-text;
+      color: color.$call-to-action;
 
       @include layout.on-tablet {
         display: inline-flex;
@@ -69,8 +69,8 @@
     @include layout.direction(column);
     @include layout.padding;
     align-items: center;
-    background-color: color.$section-background;
-    color: color.$default-text;
+    background-color: color.$bg-light;
+    color: color.$text-default;
     font-size: 0.8em;
     text-align: center;
     padding-top: 2em;

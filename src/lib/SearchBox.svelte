@@ -28,7 +28,7 @@
     }
 
     @include layout.on-tablet {
-      background-color: color.$body-background;
+      background-color: color.$bg-default;
       border-radius: 1.5em;
       min-width: $tablet-width;
       padding: 0.5em 1em;
@@ -39,7 +39,7 @@
         flex-grow: 1;
         border: none;
         outline: none;
-        color: color.$default-text;
+        color: color.$text-default;
       }
 
       &__button {
