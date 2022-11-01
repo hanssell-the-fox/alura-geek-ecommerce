@@ -1,0 +1,44 @@
+$vertical-padding: 1rem !default;
+$horizontal-padding: 1rem !default;
+$tablet-horizontal-padding: 1% !default;
+$desktop-horizontal-padding: 10% !default;
+
+// This screen sizes can be modified if the viewport size changes.
+$mobile: 360px !default;
+$tablet: 768px !default;
+$desktop: 992px !default;
+
+@mixin on-mobile {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-direction: row wrap;
+}
+
+@mixin direction($direction) {
+  flex-direction: $direction;
+}
+
+@mixin padding {
+  padding: $vertical-padding $horizontal-padding;
+
+  @include on-desktop {
+    padding: $vertical-padding $desktop-horizontal-padding;
+  }
+}
