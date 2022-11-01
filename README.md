@@ -1,5 +1,7 @@
 <img src="https://images.unsplash.com/photo-1527896573815-b7dd74893deb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" width="100%" />
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/930dcd2a-f44b-4033-8408-214c99ae34d8/deploy-status)](https://app.netlify.com/sites/algeek/deploys)
+
 ### :fox_face: AluraGeek
 
 Projeto desenvolvido durante aprendizado de tecnologias Web básicas, voltado para Frontend com o intuíto de simular um ambiente de loja virtual.
