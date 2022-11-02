@@ -1,44 +1,42 @@
-$vertical-padding: 1rem !default;
-$horizontal-padding: 1rem !default;
-$tablet-horizontal-padding: 1% !default;
+$vertical-padding: 1em !default;
+$horizontal-padding: 1em !default;
+
+// Responsive paddings
+$tablet-horizontal-padding: 3% !default;
 $desktop-horizontal-padding: 10% !default;
 
-// This screen sizes can be modified if the viewport size changes.
+// This screen sizes can be modified if the viewport changes.
 $mobile: 360px !default;
 $tablet: 768px !default;
 $desktop: 992px !default;
 
-@mixin on-mobile {
+// Newest
+@mixin on-mobile-screen {
   @media screen and (min-width: $mobile) {
     @content;
   }
 }
 
-@mixin on-tablet {
+@mixin on-tablet-screen {
   @media screen and (min-width: $tablet) {
     @content;
   }
 }
 
-@mixin on-desktop {
+@mixin on-desktop-screen {
   @media screen and (min-width: $desktop) {
     @content;
   }
 }
 
-@mixin flex-container {
-  display: flex;
-  flex-direction: row wrap;
-}
-
-@mixin direction($direction) {
-  flex-direction: $direction;
-}
-
-@mixin padding {
+@mixin responsive-padding {
   padding: $vertical-padding $horizontal-padding;
 
-  @include on-desktop {
+  @include on-tablet-screen {
+    padding: $vertical-padding $tablet-horizontal-padding;
+  }
+
+  @include on-desktop-screen {
     padding: $vertical-padding $desktop-horizontal-padding;
   }
 }

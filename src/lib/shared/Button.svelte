@@ -7,6 +7,9 @@
 </a>
 
 <style lang="scss">
+  @use 'reset';
+  @include reset.link-style;
+
   .button {
     align-items: center;
     border-width: 1px;
@@ -14,17 +17,12 @@
     border-color: inherit;
     color: inherit;
     display: inline-flex;
-    height: 2.5rem;
-    font-size: 0.9em;
-    font-weight: 600;
+    font-size: inherit;
+    font-weight: inherit;
+    height: inherit;
     justify-content: center;
-    width: 100%;
-    padding: 0.8em 0;
-    text-decoration: none;
-
-    &:visited,
-    &:active {
-      color: inherit;
-    }
+    min-width: 5em;
+    padding: 0.6em 0;
+    width: inherit;
   }
 </style>

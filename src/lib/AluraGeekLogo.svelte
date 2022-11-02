@@ -5,25 +5,22 @@
 </div>
 
 <style lang="scss">
-  @use 'color';
-  @use 'layout';
+  @use 'colors' as *;
 
   .logo {
     align-items: center;
-    color: color.$text-default;
+    color: $text-default;
     display: inline-flex;
-    font-size: 0.8em;
     font-weight: 600;
 
     &__image {
-      max-width: 2em;
-      height: 1.5em;
+      height: 1.3em;
       margin-right: 0.2em;
       margin-bottom: 0.1em;
     }
 
     &__special-text {
-      color: color.$call-to-action;
+      color: $call-to-action;
     }
   }
 </style>

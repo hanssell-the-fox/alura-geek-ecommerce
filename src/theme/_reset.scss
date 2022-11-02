@@ -1,21 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+@mixin page-structure {
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
-:global(*) {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: transparent;
-  transition: all 0.2s;
-  font-family: 'Raleway', sans-serif;
+  :global(*) {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: all 0.2s;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  :global(html, body) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  :global(body) {
+    font-weight: 400;
+    font-size: 16px;
+  }
 }
 
-:global(html, body) {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
+@mixin link-style {
+  :global(a) {
+    text-decoration: none;
+    color: inherit;
 
-:global(body) {
-  font-weight: 400;
-  font-size: 16px;
+    &:active,
+    &:visited {
+      color: inherit;
+    }
+  }
 }

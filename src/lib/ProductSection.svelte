@@ -1,6 +1,9 @@
 <script>
   export let title = '';
   export let products = [];
+
+  const getImage = (url) =>
+    `background: url(${url}) no-repeat; background-size: cover; background-position: center;`;
 </script>
 
 <section class="products">
@@ -9,93 +12,86 @@
     <a class="section__link" href="/" on:click|preventDefault={() => {}}>Ver tudo</a>
   </div>
 
-  <ul class="products__list">
+  <ul class="products__list product">
     {#each products as product}
-      <li class="products__item">
-        <figure class="product">
-          <img class="product__image" src={product} alt="Imagem de um produto" />
-          <figcaption class="product__description">Produto XYZ</figcaption>
-        </figure>
-        <span class="products__price">R$ 60,00</span>
-        <a class="products__link" href="/">Ver produto</a>
+      <li class="product__item">
+        <div class="product__image" style={getImage(product)} />
+        <div class="product__info">
+          <span class="product__description">{product?.description || 'Produto XYZ'}</span>
+          <span class="product__price">R$ 60,00</span>
+          <a class="product__link" href="/">Ver produto</a>
+        </div>
       </li>
     {/each}
   </ul>
 </section>
 
 <style lang="scss">
-  @use 'color';
+  @use 'colors';
   @use 'layout';
+  @use 'reset';
+
+  @include reset.link-style;
 
   .products {
-    @include layout.padding;
-    color: color.$text-default;
-    width: 100%;
+    @include layout.responsive-padding;
+    color: colors.$text-default;
 
     &__header {
-      margin-bottom: 1rem;
+      padding: 1em 0;
     }
 
     &__list {
       display: flex;
       flex-wrap: wrap;
       list-style: none;
-      gap: 1rem;
     }
+  }
+
+  .product {
+    gap: 1rem;
 
     &__item {
-      display: inline-flex;
-      flex-direction: column;
       width: calc(100% / 2 - 1rem);
-      max-width: calc(100% / 2);
       flex-grow: 1;
 
       &:nth-of-type(n + 5) {
         display: none;
       }
 
-      @include layout.on-tablet {
-        max-width: calc(100% / 4 - 0.8rem);
+      @include layout.on-tablet-screen {
+        max-width: calc(100% / 4 - 0.75em);
       }
 
-      @include layout.on-desktop {
-        max-width: calc(100% / 6 - 0.9rem);
+      @include layout.on-desktop-screen {
+        max-width: calc(100% / 6 - 0.85em);
         &:nth-of-type(n + 5) {
           display: block;
         }
       }
     }
 
-    &__price {
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    &__link {
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 0.9rem;
-      color: color.$call-to-action;
-      margin-right: 1rem;
-
-      &:visited,
-      &:active {
-        color: color.$call-to-action;
-      }
-    }
-  }
-
-  .product {
     &__image {
-      display: block;
-      width: 100%;
       aspect-ratio: 1 / 1;
     }
 
+    &__info {
+      display: inline-flex;
+      flex-direction: column;
+      padding: 0.5em 0;
+    }
     &__description {
-      margin: 0.5rem 0;
-      font-size: 0.9rem;
+      font-size: 0.9em;
+    }
+
+    &__price {
+      font-weight: 700;
+      padding: 0.2em 0;
+    }
+    &__link {
+      font-weight: bold;
+      font-size: 0.9em;
+      color: colors.$call-to-action;
     }
   }
 
@@ -108,13 +104,13 @@
     &__link {
       text-decoration: none;
       font-weight: bold;
-      color: color.$call-to-action;
+      color: colors.$call-to-action;
       position: relative;
       margin-right: 1rem;
 
       &:visited,
       &:active {
-        color: color.$call-to-action;
+        color: colors.$call-to-action;
       }
 
       &::after {

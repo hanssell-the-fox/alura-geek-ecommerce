@@ -3,7 +3,7 @@
 </script>
 
 <section class="banner">
-  <div class="banner__promotion">
+  <div class="banner__promotion promotion">
     <div class="promotion__text">
       <h1 class="promotion__title">Dezembro Promocional</h1>
       <p class="promotion__description">Produtos selecionados com 33% de desconto</p>
@@ -15,64 +15,61 @@
 </section>
 
 <style lang="scss">
-  @use 'color';
+  @use 'colors';
   @use 'layout';
 
   .banner {
     background: url(https://images.unsplash.com/photo-1527896573815-b7dd74893deb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80);
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: colors.$text-light;
 
     &__promotion {
-      display: inline-flex;
-      width: 100%;
-      height: 100%;
-      @include layout.padding;
-      height: 100%;
-      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+      @include layout.responsive-padding;
+      background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6));
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
   }
 
   .promotion {
-    &__text {
-      margin-top: 5rem;
-      width: 100%;
+    padding-top: 5em;
+
+    @include layout.on-tablet-screen {
+      padding-top: 10em;
+      padding-bottom: 2em;
     }
 
     &__title {
-      margin-bottom: 0.5rem;
-      font-weight: 700;
+      margin-bottom: 0.5em;
+
+      @include layout.on-tablet-screen {
+        font-size: 3.25em;
+        margin-bottom: 0.4em;
+      }
     }
 
     &__description {
-      font-size: 0.9rem;
+      font-size: 0.9em;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.5em;
+
+      @include layout.on-tablet-screen {
+        font-size: 1.37rem;
+        margin-bottom: 1rem;
+      }
     }
 
     &__button {
-      max-width: 8rem;
+      background-color: colors.$call-to-action;
       border-color: transparent;
+      display: inline-block;
+      max-width: 8em;
       width: 100%;
-      display: inline-flex;
-      align-items: stretch;
-      background-color: color.$call-to-action;
-    }
 
-    @include layout.on-tablet {
-      &__text {
-        margin-top: 10rem;
-      }
-
-      &__title {
-        font-size: 3.25rem;
-        margin-bottom: 1.2rem;
-      }
-
-      &__description {
-        font-size: 1.37rem;
-        margin-bottom: 1rem;
+      &:hover {
+        opacity: 0.8;
       }
     }
   }
