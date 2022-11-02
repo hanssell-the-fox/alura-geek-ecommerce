@@ -59,11 +59,11 @@
         display: none;
       }
 
-      @include layout.on-tablet-screen {
+      @include layout.on-tablet {
         max-width: calc(100% / 4 - 0.75em);
       }
 
-      @include layout.on-desktop-screen {
+      @include layout.on-desktop {
         max-width: calc(100% / 6 - 0.85em);
         &:nth-of-type(n + 5) {
           display: block;

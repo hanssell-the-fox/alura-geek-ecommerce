@@ -21,7 +21,7 @@
     font-weight: inherit;
     height: inherit;
     justify-content: center;
-    min-width: 5em;
+    line-height: inherit;
     padding: 0.6em 0;
     width: inherit;
   }

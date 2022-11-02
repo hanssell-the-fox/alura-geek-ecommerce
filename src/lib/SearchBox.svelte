@@ -12,7 +12,7 @@
   .search-box {
     display: inline-flex;
 
-    @include layout.on-tablet-screen {
+    @include layout.on-tablet {
       background-color: colors.$background-default;
       border-radius: 1.5em;
       min-width: 17em;
@@ -23,7 +23,7 @@
     &__input {
       display: none;
 
-      @include layout.on-tablet-screen {
+      @include layout.on-tablet {
         border: none;
         color: colors.$text-default;
         display: block;
@@ -39,19 +39,19 @@
       display: flex;
       justify-content: center;
 
-      @include layout.on-tablet-screen {
+      @include layout.on-tablet {
         margin: auto 0;
         opacity: 0.5;
       }
     }
 
-    @include layout.on-tablet-screen {
+    @include layout.on-tablet {
       &__image {
         height: 1em;
       }
     }
 
-    @include layout.on-desktop-screen {
+    @include layout.on-desktop {
       min-width: 24.56em;
     }
   }

@@ -1,3 +1,5 @@
+@use 'colors';
+
 @mixin page-structure {
   @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
@@ -13,12 +15,13 @@
   :global(html, body) {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: auto;
   }
 
   :global(body) {
     font-weight: 400;
     font-size: 16px;
+    background-color: colors.$background-default;
   }
 }
 

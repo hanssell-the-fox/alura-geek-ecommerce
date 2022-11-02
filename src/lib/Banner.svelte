@@ -36,7 +36,7 @@
   .promotion {
     padding-top: 5em;
 
-    @include layout.on-tablet-screen {
+    @include layout.on-tablet {
       padding-top: 10em;
       padding-bottom: 2em;
     }
@@ -44,7 +44,7 @@
     &__title {
       margin-bottom: 0.5em;
 
-      @include layout.on-tablet-screen {
+      @include layout.on-tablet {
         font-size: 3.25em;
         margin-bottom: 0.4em;
       }
@@ -55,7 +55,7 @@
       font-weight: 600;
       margin-bottom: 0.5em;
 
-      @include layout.on-tablet-screen {
+      @include layout.on-tablet {
         font-size: 1.37rem;
         margin-bottom: 1rem;
       }

@@ -1,5 +1,5 @@
 <script>
-  import AluraGeekLogo from '$lib/AluraGeekLogo.svelte';
+  import Logo from '$shared/Logo.svelte';
   import Button from '$shared/Button.svelte';
 
   const services = [
@@ -15,7 +15,7 @@
 <section class="contact">
   <div class="contact__section">
     <span class="contact__logo">
-      <AluraGeekLogo />
+      <Logo />
     </span>
 
     <ul class="list">
@@ -57,12 +57,12 @@
     background-color: $background-color;
     text-align: center;
 
-    @include layout.on-tablet-screen {
+    @include layout.on-tablet {
       flex-direction: row;
       text-align: left;
     }
 
-    @include layout.on-desktop-screen {
+    @include layout.on-desktop {
       align-items: center;
       &__section {
         display: inline-flex;
@@ -88,7 +88,7 @@
     list-style: none;
     margin: 1em 0;
 
-    @include layout.on-desktop-screen {
+    @include layout.on-desktop {
       margin-left: 1em;
       margin-right: 1em;
       min-width: 11em;
@@ -127,7 +127,7 @@
     font-size: inherit;
     width: 100%;
 
-    @include layout.on-desktop-screen {
+    @include layout.on-desktop {
       width: 50%;
     }
 
